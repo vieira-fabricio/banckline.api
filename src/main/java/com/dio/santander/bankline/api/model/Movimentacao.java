@@ -2,11 +2,24 @@ package com.dio.santander.bankline.api.model;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="table_movimentacao")
 public class Movimentacao {
-	private Integer id;
+	private Integer id; 
+	
+	@Column(name="data_hora")
 	private LocalDateTime dataHora;
+	
 	private String descricao;
 	private Double valor;
+	
+	@Enumerated(EnumType.STRING)
 	private MovimentacaoTipo tipo;
 	
 	public Integer getId() {
