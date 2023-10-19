@@ -7,6 +7,9 @@ public class NovaMovimentacao {
 	private Double valor;
 	private MovimentacaoTipo tipo;
 	private Integer idConta;
+	private Long numeroCartao;
+
+	private Long limiteCartao;
 	
 	public String getDescricao() {
 		return descricao;
@@ -32,5 +35,18 @@ public class NovaMovimentacao {
 	public void setIdConta(Integer idConta) {
 		this.idConta = idConta;
 	}
-	
+
+	public Long getNumeroCartao() {
+		return numeroCartao;
+	}
+	public void setNumeroCartao(Long numeroCartao) {
+		this.numeroCartao = numeroCartao;
+	}
+
+	public Long getLimiteCartao() {
+		return limiteCartao;
+	}
+	public void setLimiteCartao(Long limiteCartao) {
+		this.limiteCartao = limiteCartao;
+	}
 }

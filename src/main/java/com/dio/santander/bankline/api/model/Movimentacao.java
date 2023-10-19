@@ -29,6 +29,11 @@ public class Movimentacao {
 	
 	@Column(name="id_conta")
 	private Integer idConta;
+
+	private Long numeroCartao;
+	private Long limiteCartao;
+
+
 	
 	public Integer getId() {
 		return id;
@@ -67,5 +72,17 @@ public class Movimentacao {
 	
 	public void setIdConta(Integer idConta) {
 		this.idConta = idConta;
+	}
+	public Long getNumeroCartao() {
+		return numeroCartao;
+	}
+	public void setNumeroCartao(Long numeroCartao) {
+		this.numeroCartao = numeroCartao;
+	}
+	public Long getLimiteCartao() {
+		return limiteCartao;
+	}
+	public void setLimiteCartao(Long limiteCartao) {
+		this.limiteCartao = limiteCartao;
 	}
 }
