@@ -4,38 +4,47 @@ Java RESTful API criada para o bootcamp do Santander em java e angular
 ## Diagrama de classes
 ```mermaid
 classDiagram
-  class User {
-    -String name
-    -Account account
-    -Feature[] features
-    -Card card
-    -News[] news
+  class Cliente {
+    -String nome
+    -ContaCorrente contaCorrente
+    -ContaPoupanca contaPoupanca
+    -Recurso[] recursos
+    -Cartao cartao
+    -Novidades[] novidades
   }
 
-  class Account {
-    -String number
-    -String agency
-    -Number balance
-    -Number limit
+  class ContaCorrente {
+    -String numero
+    -String agencia
+    -Number saldo
+    -Number limite
   }
 
-  class Feature {
-    -String icon
-    -String description
+  class ContaPoupanca {
+    -String numero
+    -String agencia
+    -Number saldo
+    -Number limite
   }
 
-  class Card {
-    -String number
-    -Number limit
+  class Recurso {
+    -String icone
+    -String descricao
   }
 
-  class News {
-    -String icon
-    -String description
+  class Cartao {
+    -String numero
+    -Number limite
   }
 
-  User "1" *-- "1" Account
-  User "1" *-- "N" Feature
-  User "1" *-- "1" Card
-  User "1" *-- "N" News
+  class Novidades {
+    -String icone
+    -String descricao
+  }
+
+  Cliente "1" *-- "1" ContaCorrente
+  Cliente "1" *-- "1" ContaPoupanca
+  Cliente "1" *-- "N" Recurso
+  Cliente "1" *-- "1" Cartao
+  Cliente "1" *-- "N" Novidades
 ```
